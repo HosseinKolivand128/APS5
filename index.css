@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+div div div{
+    background-color: burlywood;
+    margin: 2px;
+    height: 150px;
+    min-width:75px ;
+}
+.cardy{
+    width: 12rem;
+    height: 15rem;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    background-color: bisque;
+}
+.carousel{
+    margin: 10px 0;
+}
+.card{
+    padding: 20px;
+}
+.card div{
+    background-color: aqua;
+    width: 120px;
+    height:120px;
+    /* justify-content: space-around; */
+    position: relative;
+    left:33%;
+    top:8% ;
+    transition: all 1 linear;
+}
+
+.one:hover{
+    transform: scale(2);
+}
+.two:hover{
+    transform: scaleX(5);
+}
+.three:hover{
+    transform: skewY(30deg);
+}
+.four:hover{
+    /* change the position */
+    transform: translate(10px,-30px);
+}
+.five:hover{
+    transform: translateX(50px);
+}
+.six:hover{
+    transform-origin:top left;
+    transform: rotate(45deg);
+}
+.seven:hover{
+    transform-origin: bottom ;
+    transform: perspective(150px) rotateX(45deg);
+}
+.eight:hover{
+    transform: scale(2);
+}
+.nine:hover{
+    transform: scale(2);
+    /* change the transform */
+}
+.row div{
+    margin:10px
+}
+/* .card{
+    display: flex;
+} */
