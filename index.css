@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url("//s.alicdn.com/@img/imgextra/i4/O1CN01ustqhi1Tz44lu4arh_!!6000000002452-0-tps-3840-1248.jpg_q60.jpg");
+    height:40vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.navbar{
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    }
+.navbar a{
+    color: aliceblue;
+}
+.navbar-toggler{
+    background-color: aliceblue;
+}
+.signUp{
+    border-radius: 20px;
+    padding:3px 10px 10px ;
+    height: 30px;  
+    font-size: small;  
+    font-weight: bold;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar-nav > *{
+    /* min-width: fit-content; */
+    min-width: fit-content;
+}
+
+i{
+    color:white;
+}
+.banner-content{
+    height: fit-content;
+    padding: 10%;
+color: aliceblue;
+}
+.banner-content >*{
+    margin: 20px 5px;
+}
+.search-form{
+    width:90%
+}
+.frequently-searches{
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+}
+.searches{
+    display: flex;
+    gap: 15px;
+}
+.search{
+    border: 1px solid white;
+    border-radius:25px;
+    background-color: transparent;
+    padding: 5px;
+}
+.cards{
+    height: min-content;
+    background-color: #3a190b;
+    gap: 10px;
+    /* display: flex; */
+}
+.card{
+    background-color: #4f2717;
+    color:white;
+    width: 200px;
+}
+
+.card:hover{
+       background-color: #853e22;
+ 
+}
