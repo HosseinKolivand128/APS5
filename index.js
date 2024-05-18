@@ -1,9 +1,53 @@
 const input = document.querySelector("#input-task")
 const addTaskBtn = document.querySelector("#add-task-btn")
 const takeList = document.querySelector("#task-list")
+const form = document.querySelector("form")
 
 const names = [];
 let counter = 0;
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const li = document.createElement("li");
+    // li.style.display = "flex";
+    li.addEventListener("click", (e) => {
+        // e.target.style.color = "red"
+        e.target.parentElement.removeChild(li)
+    })
+    // console.dir(input);
+    li.textContent = input.value;
+    takeList.append(li)
+})
+
+
+
+
+
+// addTaskBtn.addEventListener("click", () => {
+//     const li = document.createElement("li");
+//     // li.style.display = "flex";
+//     li.addEventListener("click", (e) => {
+//         // e.target.style.color = "red"
+//         e.target.parentElement.removeChild(li)
+//     })
+//     // console.dir(input);
+//     li.textContent = input.value;
+//     takeList.append(li)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // addTaskBtn.addEventListener("click", () => {
 //     //check if the name is exists or not
 //     if (input.value !== "" && input.value !== " ") {
