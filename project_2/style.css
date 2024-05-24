@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#axiosData, #ajaxData {
+    margin-top: 30px;
+}
+
+#axiosList, #ajaxList {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
