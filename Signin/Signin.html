@@ -40,30 +40,6 @@
     <script>
         const URL = "https://66506ad1ec9b4a4a6031fff5.mockapi.io/DISCO"
 
-        const signInForm = document.querySelector("#signInForm");
-        signInForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const email = e.target.email.value;
-            const password = e.target.password.value;
-
-            getData().then((data) => {
-                data.forEach(obj => {
-                    console.log(obj);
-                    if (obj.Email === email && obj.Password === password) {
-                        alert(`WELCOME ${obj.Username}`)
-                    } else {
-                        alert("Username or password is wrong!!!")
-                    }
-                });
-            })
-
-        })
-
-        async function getData() {
-            const response = await axios.get(URL);
-            return response.data;
-
-        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
