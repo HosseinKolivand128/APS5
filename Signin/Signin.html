@@ -22,6 +22,8 @@
     <div class="container">
         <div class="form-container">
             <h2>Sign In</h2>
+
+
             <form id="signInForm">
                 <div class="input-group">
                     <label for="email">Email</label>
@@ -34,14 +36,115 @@
                 <button type="submit">Sign In</button>
                 <p class="message">Not registered? <a href="../Signup/Signup.html">Create an account</a></p>
             </form>
+
+
+
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const URL = "https://66506ad1ec9b4a4a6031fff5.mockapi.io/DISCO"
+        const URL = "https://66506ad1ec9b4a4a6031fff5.mockapi.io/DISCO";
+
+
+
+        const signInForm = document.querySelector("#signInForm");
+        signInForm.addEventListener("submit", async (e) => {
+            e.preventDefault();//!important
+
+            // const email = document.querySelector("#email");
+            // const password = document.querySelector("#password");
+
+            //!axios
+            // console.log(getData());
+
+            // try {
+            //     const data = await getData();
+            //     console.log(data);
+            //     const user = data.filter(obj => {
+            //         console.log(obj);
+            //         if (obj.email === e.target.email.value && obj.password === e.target.password.value) {
+            //             return obj;
+            //         }
+            //     });
+
+            //     console.log(user);
+
+            //     if (user.length > 0) {
+            //         alert(`Welcome ${user[0].username}`);
+            //     } else {
+
+            //         alert(`username or password was incorrect`);
+            //     }
+
+            // } catch (error) {
+            //     console.log(error);
+            // }
+
+            try {
+                getData().then((data) => {
+                    console.log(data);
+                    const user = data.filter(obj => {
+
+                        if (obj.email === e.target.email.value && obj.password === e.target.password.value) {
+                            return obj;
+                        }
+                    });
+
+                    console.log(user);
+
+                    if (user.length > 0) {
+                        alert(`Welcome ${user[0].username}`);
+
+                        window.location.href = "../index.html";
+                        
+                    } else {
+
+                        alert(`username or password was incorrect`);
+                    }
+                })
+            } catch (error) {
+                console.log(error);
+            }
+
+        })
+        //!get R
+
+        //!post C
+
+        //!put
+        //!patch
+        //U
+
+        //!delete
+        //D
+
+        async function getData() {
+
+            //!axios
+            // try {
+            //     const response = await axios.get(URL);
+            //     // console.log(response.data);
+            //     return response.data;
+
+            // } catch (error) {
+            //     console.log(error);
+            // }
+
+            //!fetch
+            try {
+
+                const response = await fetch(URL);
+                const data = await response.json();
+                return data;
+
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
 
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 

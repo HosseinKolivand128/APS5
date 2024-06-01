@@ -50,7 +50,39 @@
     </div>
 
     <script>
+        const URL = "https://66506ad1ec9b4a4a6031fff5.mockapi.io/DISCO";
 
+        const signUpForm = document.querySelector("#signUpForm");
+
+        signUpForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = e.target.username.value;
+            const email = e.target.email.value;
+            const role = e.target.role.value;
+            const password = e.target.password.value;
+            const rePassword = e.target.rePassword.value;
+
+            if (!(password === rePassword)) {
+                alert("The passwords you entered does not match")
+            } else {
+                sendData({ username, email, role, password });
+            }
+            
+        })
+        
+        async function sendData(data) {
+            try {
+                //post
+                const response = await axios.post(URL, data);
+                alert("Data sent successfully")
+                alert("Account created")
+                console.log(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
